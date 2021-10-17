@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <form action="http://localhost:8000/uploadfile" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Upload image</label>
+                <input type="hidden" name="{{ .Key }}" value="{{ .Value }}">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+                <button style="margin-top: 10px;" type="submit" name="upload">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
